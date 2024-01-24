@@ -4,7 +4,6 @@ import com.example.demo.DomainService.UserRepository;
 import com.example.demo.contsts.TextConsts;
 import com.example.demo.dto.User;
 import com.example.demo.service.UserService;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -16,6 +15,9 @@ public class UserTest {
     private static final UserRepository repository = new UserRepository();
     private static final UserService userService = new UserService(repository);
 
+    /*
+        Добавим несколько пользователей перед тестами
+     */
     @BeforeAll
     public static void createServices(){
         repository.addUser(new User("Sergio Aguero", "123"));
@@ -23,11 +25,17 @@ public class UserTest {
         repository.addUser(new User("Leonel Messi", "333"));
     }
 
+    /*
+        Тест метода репозитория на поиск по имени
+     */
     @Test
     public void repositoryFindByUsernameTest() {
         Assertions.assertNotNull(repository.findUserByUsername("Sergio Aguero"));
     }
 
+    /*
+        Тем метода репозитория на добавление пользователя
+     */
     @Test
     public void repositoryAddUserTest() {
         int listSize = repository.getAll().size();
@@ -35,11 +43,17 @@ public class UserTest {
         Assertions.assertEquals(repository.getAll().size(), listSize+1);
     }
 
+    /*
+        Тест методов репозитория и сервиса на получение всех пользователей
+     */
     @Test
     public void getAllTest() {
         Assertions.assertArrayEquals(new List[]{repository.getAll()}, new List[]{userService.getAll()});
     }
 
+    /*
+        Тест успешной регистрации
+     */
     @Test
     public void firstRegistrationTest() {
         userService.userRegistration("Andre Onana", "123", "123");
@@ -47,6 +61,9 @@ public class UserTest {
         Assertions.assertNotNull(repository.findUserByUsername("Andre Onana"));
     }
 
+    /*
+        Тесты неудачной регистрации
+     */
     @Test
     public void secondRegistrationTest() {
         int listSize = repository.getAll().size();
@@ -57,6 +74,9 @@ public class UserTest {
         Assertions.assertEquals(repository.getAll().size(), listSize);
     }
 
+    /*
+        Тест удачной авторизации
+     */
     @Test
     public void firstLoginTest() {
         Assertions.assertEquals(
@@ -66,6 +86,9 @@ public class UserTest {
 
     }
 
+    /*
+        Тест неудачной авторизации
+     */
     @Test
     public void secondLoginTest() {
         Assertions.assertEquals(
@@ -75,6 +98,9 @@ public class UserTest {
 
     }
 
+    /*
+        Тест удачной смены пароля
+     */
     @Test
     public void firstChangePasswordTest() {
         Assertions.assertEquals(
@@ -83,6 +109,9 @@ public class UserTest {
         );
     }
 
+    /*
+        Тест неудачной смены пароля
+     */
     @Test
     public void secondChangePasswordTest() {
         Assertions.assertEquals(
@@ -91,6 +120,9 @@ public class UserTest {
         );
     }
 
+    /*
+        Тест неудачной смены пароля
+     */
     @Test
     public void thirdChangePasswordTest() {
         Assertions.assertEquals(
