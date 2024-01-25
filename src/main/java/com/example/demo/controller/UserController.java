@@ -1,6 +1,8 @@
 package com.example.demo.controller;
 
 import com.example.demo.dto.User;
+import com.example.demo.exception.PasswordsDontMatchException;
+import com.example.demo.exception.WrongUsernameOrPasswordException;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -45,7 +47,7 @@ public class UserController {
         Метод входа в систему
      */
     @PostMapping("/userLogin")
-    public ResponseEntity<String> userLogin(@ModelAttribute User user){
+    public ResponseEntity<String> userLogin(@ModelAttribute User user) {
         return ResponseEntity.ok(userService.userLogin(user));
     }
 
