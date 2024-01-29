@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.entity.User;
+import com.example.demo.mapper.UserMapper;
 import com.example.demo.repository.UserRepository;
 import com.example.demo.contsts.TextConsts;
 import com.example.demo.dto.UserInfo;
@@ -18,10 +19,12 @@ import java.util.stream.Collectors;
 public class UserService {
 
     private final UserRepository repository;
+    private final UserMapper userMapper;
 
     @Autowired
-    public UserService(UserRepository repository) {
+    public UserService(UserRepository repository, UserMapper userMapper) {
         this.repository = repository;
+        this.userMapper = userMapper;
     }
 
     public UserInfo getById(Long id) {
@@ -34,7 +37,7 @@ public class UserService {
      */
     public List<UserInfo> getAll() {
         return repository.getAll()
-                .stream().map(user -> new UserInfo(user.getName()))
+                .stream().map(userMapper::userToUserInfo)
                 .collect(Collectors.toList());
     }
 

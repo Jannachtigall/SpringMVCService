@@ -6,6 +6,6 @@ public class TextConsts {
     public static String alreadyRegistered = "A user with that name has already been registered.";
     public static String registrationCompleted = "REGISTRATION WAS COMPLETED SUCCESSFULLY!";
     public static String loginCompleted = "YOU HAVE SUCCESSFULLY LOGGED IN SYSTEM";
-    public static String wrongUsernameOrPassword = "Wrong username or password!";
+    public static String wrongUsernameOrPassword = "Wrong username, or password, or id!";
     public static String theChangesWereMAdeSuccessfully = "The changes were made successfully!";
 }

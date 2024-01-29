@@ -2,6 +2,7 @@ package com.example.demo.test;
 
 import com.example.demo.config.SessionFactoryConfig;
 import com.example.demo.entity.User;
+import com.example.demo.mapper.UserMapper;
 import com.example.demo.repository.UserRepository;
 import com.example.demo.contsts.TextConsts;
 import com.example.demo.service.UserService;
@@ -14,7 +15,7 @@ import java.util.List;
 public class UserTest {
 
     private static final UserRepository repository = new UserRepository(new SessionFactoryConfig());
-    private static final UserService userService = new UserService(repository);
+    private static final UserService userService = new UserService(repository, new UserMapper());
 
     /*
         Добавим несколько пользователей перед тестами

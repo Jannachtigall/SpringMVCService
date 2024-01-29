@@ -2,7 +2,8 @@ package com.example.demo.repository;
 
 import com.example.demo.config.SessionFactoryConfig;
 import com.example.demo.entity.User;
-import jakarta.transaction.Transactional;
+import com.example.demo.exception.ChangePasswordException;
+import com.example.demo.exception.WrongUsernameOrPasswordException;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -27,7 +28,7 @@ public class UserRepository {
         try(Session session = sessionFactoryConfig.getSession()) {
             return session.get(User.class, id);
         } catch (HibernateException e) {
-            return new User();
+            throw new WrongUsernameOrPasswordException();
         }
     }
 
@@ -54,8 +55,7 @@ public class UserRepository {
             query.setParameter("userName", name);
             return query.uniqueResult();
         } catch (HibernateException e) {
-            e.printStackTrace();
-            return null;
+            throw new WrongUsernameOrPasswordException();
         }
     }
 
@@ -66,7 +66,7 @@ public class UserRepository {
         try (Session session = sessionFactoryConfig.getSession()){
             session.save(user);
         } catch (HibernateException e) {
-            e.printStackTrace();
+            throw new WrongUsernameOrPasswordException();
         }
     }
 
@@ -98,7 +98,7 @@ public class UserRepository {
 
             transactional.commit();
         } catch (HibernateException e) {
-            e.printStackTrace();
+            throw new ChangePasswordException();
         }
     }
 
