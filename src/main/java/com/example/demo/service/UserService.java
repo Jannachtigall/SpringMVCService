@@ -1,8 +1,9 @@
 package com.example.demo.service;
 
-import com.example.demo.DomainService.UserRepository;
+import com.example.demo.entity.User;
+import com.example.demo.repository.UserRepository;
 import com.example.demo.contsts.TextConsts;
-import com.example.demo.dto.User;
+import com.example.demo.dto.UserInfo;
 import com.example.demo.exception.ChangePasswordException;
 import com.example.demo.exception.PasswordsDontMatchException;
 import com.example.demo.exception.UserAlreadyExistsException;
@@ -10,9 +11,8 @@ import com.example.demo.exception.WrongUsernameOrPasswordException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.net.PasswordAuthentication;
 import java.util.List;
-import java.util.Objects;
+import java.util.stream.Collectors;
 
 @Service
 public class UserService {
@@ -24,11 +24,18 @@ public class UserService {
         this.repository = repository;
     }
 
+    public UserInfo getById(Long id) {
+        User user = repository.findById(id);
+        return new UserInfo(user.getName());
+    }
+
     /*
         Метод обработки запроса на получение всех пользователей в системе.
      */
-    public List<User> getAll() {
-        return repository.getAll();
+    public List<UserInfo> getAll() {
+        return repository.getAll()
+                .stream().map(user -> new UserInfo(user.getName()))
+                .collect(Collectors.toList());
     }
 
     /*
@@ -68,7 +75,7 @@ public class UserService {
         if (foundedUser == null || !foundedUser.getPassword().equals(user.getPassword())) {
             throw new ChangePasswordException();
         }
-        foundedUser.setPassword(newPassword);
+        repository.updateUserChangePassword(foundedUser.getName(), newPassword);
         return TextConsts.theChangesWereMAdeSuccessfully;
     }
 }

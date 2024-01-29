@@ -1,8 +1,9 @@
 package com.example.demo.test;
 
-import com.example.demo.DomainService.UserRepository;
+import com.example.demo.config.SessionFactoryConfig;
+import com.example.demo.entity.User;
+import com.example.demo.repository.UserRepository;
 import com.example.demo.contsts.TextConsts;
-import com.example.demo.dto.User;
 import com.example.demo.service.UserService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -12,7 +13,7 @@ import java.util.List;
 
 public class UserTest {
 
-    private static final UserRepository repository = new UserRepository();
+    private static final UserRepository repository = new UserRepository(new SessionFactoryConfig());
     private static final UserService userService = new UserService(repository);
 
     /*

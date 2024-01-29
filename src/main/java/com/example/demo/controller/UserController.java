@@ -1,8 +1,7 @@
 package com.example.demo.controller;
 
-import com.example.demo.dto.User;
-import com.example.demo.exception.PasswordsDontMatchException;
-import com.example.demo.exception.WrongUsernameOrPasswordException;
+import com.example.demo.dto.UserInfo;
+import com.example.demo.entity.User;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -26,7 +25,7 @@ public class UserController {
      */
     @GetMapping("/getAll")
     @ResponseBody
-    public ResponseEntity<List<User>> getAll() {
+    public ResponseEntity<List<UserInfo>> getAll() {
         return ResponseEntity.ok(userService.getAll());
     }
 
