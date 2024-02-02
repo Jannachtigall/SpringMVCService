@@ -10,8 +10,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="138cd132-038f-4cde-9ac3-ffbc6b6bd234" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/test/UserServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/aop/LazyExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/aop/LazyExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/SessionFactoryConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/contsts/TextConsts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/consts/TextConsts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/exception/ChangePasswordException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/exception/ChangePasswordException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/exception/PasswordsDontMatchException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/exception/PasswordsDontMatchException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/exception/UserAlreadyExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/exception/UserAlreadyExistsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/exception/WrongUsernameOrPasswordException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/exception/WrongUsernameOrPasswordException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/test/UserTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContextMVC.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,12 +66,16 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/79026/Documents/Джавина/AstonApp&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/79026/Documents/Джавина/SpringInAction&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -68,8 +89,8 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.98">
-    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AstonApp" />
       <extension name="coverage">
         <pattern>
@@ -78,13 +99,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.demo.test" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.test.UserTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.test.UserServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest.repositoryAddUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest.changePasswordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AstonApp" />
       <extension name="coverage">
         <pattern>
@@ -93,14 +114,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.demo.test" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.test.UserTest" />
-      <option name="METHOD_NAME" value="repositoryAddUserTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.test.UserServiceTest" />
+      <option name="METHOD_NAME" value="changePasswordTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest.repositoryFindByUsernameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest.firstWrongChangePasswordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AstonApp" />
       <extension name="coverage">
         <pattern>
@@ -109,14 +130,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.demo.test" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.test.UserTest" />
-      <option name="METHOD_NAME" value="repositoryFindByUsernameTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.test.UserServiceTest" />
+      <option name="METHOD_NAME" value="firstWrongChangePasswordTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest.repositoryHasUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest.wrongLoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AstonApp" />
       <extension name="coverage">
         <pattern>
@@ -125,25 +146,22 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.demo.test" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.test.UserTest" />
-      <option name="METHOD_NAME" value="repositoryHasUserTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.test.UserServiceTest" />
+      <option name="METHOD_NAME" value="wrongLoginTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest.thirdChangePasswordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="AstonApp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.Application" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.demo.test.*" />
+          <option name="PATTERN" value="com.example.demo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.demo.test" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.test.UserTest" />
-      <option name="METHOD_NAME" value="thirdChangePasswordTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -237,11 +255,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserTest" />
-        <item itemvalue="JUnit.UserTest.repositoryHasUserTest" />
-        <item itemvalue="JUnit.UserTest.repositoryAddUserTest" />
-        <item itemvalue="JUnit.UserTest.repositoryFindByUsernameTest" />
-        <item itemvalue="JUnit.UserTest.thirdChangePasswordTest" />
+        <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="JUnit.UserServiceTest.firstWrongChangePasswordTest" />
+        <item itemvalue="JUnit.UserServiceTest.changePasswordTest" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.UserServiceTest.wrongLoginTest" />
       </list>
     </recent_temporary>
   </component>
@@ -268,11 +286,35 @@
       <workItem from="1706534813901" duration="6001000" />
       <workItem from="1706545469045" duration="604000" />
       <workItem from="1706546093695" duration="1620000" />
-      <workItem from="1706551628978" duration="660000" />
+      <workItem from="1706551628978" duration="1116000" />
+      <workItem from="1706620168372" duration="7940000" />
+      <workItem from="1706864165084" duration="9498000" />
+      <workItem from="1706887933808" duration="3070000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NoClassDefFoundError" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

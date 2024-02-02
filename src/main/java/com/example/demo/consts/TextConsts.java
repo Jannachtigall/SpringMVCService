@@ -1,4 +1,4 @@
-package com.example.demo.contsts;
+package com.example.demo.consts;
 
 public class TextConsts {
     public static String theUserNameConNotBeEmpty = "The username can not be empty.";

@@ -1,6 +1,6 @@
 package com.example.demo.exception;
 
-import com.example.demo.contsts.TextConsts;
+import com.example.demo.consts.TextConsts;
 
 public class WrongUsernameOrPasswordException extends RuntimeException{
 

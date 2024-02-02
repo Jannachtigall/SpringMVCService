@@ -1,6 +1,6 @@
 package com.example.demo.aop;
 
-import com.example.demo.contsts.TextConsts;
+import com.example.demo.consts.TextConsts;
 import com.example.demo.exception.ChangePasswordException;
 import com.example.demo.exception.PasswordsDontMatchException;
 import com.example.demo.exception.UserAlreadyExistsException;

@@ -3,21 +3,20 @@ package com.example.demo.controller;
 import com.example.demo.dto.UserInfo;
 import com.example.demo.entity.User;
 import com.example.demo.service.UserService;
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Slf4j
 @RestController
+@AllArgsConstructor
 public class UserController {
 
     private final UserService userService;
-
-    @Autowired
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
 
     /*
         Метод получаения всех пользователей.
